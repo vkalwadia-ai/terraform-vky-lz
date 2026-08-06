@@ -7,6 +7,10 @@ rg_name = {
     rg_name     = "rg2"
     rg_location = "westus"
   }
+  rg3 = {
+    rg_name     = "rg3"
+    rg_location = "westus"
+  }
 }
 vnet_name = {
   vnet1 = {
