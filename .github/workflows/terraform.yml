@@ -1,39 +1,29 @@
-name: Terraform Azure Pipeline
+permissions:
+  id-token: write
+  contents: read
 
-on:
-  push:
-    branches:
-      - main
+env:
+  ARM_CLIENT_ID: "42133458-581f-4d9b-80ce-19b3fca592e9"
+  ARM_TENANT_ID: "c8f1af26-7fc1-4c5a-a985-e119d2abba15"
+  ARM_SUBSCRIPTION_ID: "33e9da52-73fb-4456-aac2-4547ed5d7ac1"
 
-  pull_request:
-    branches:
-      - main
+steps:
+  - name: Checkout
+    uses: actions/checkout@v4
 
-jobs:
-  terraform:
-    name: Terraform
-    runs-on: ubuntu-latest
+  - name: Azure Login
+    uses: azure/login@v2
+    with:
+      client-id: ${{ env.ARM_CLIENT_ID }}
+      tenant-id: ${{ env.ARM_TENANT_ID }}
+      subscription-id: ${{ env.ARM_SUBSCRIPTION_ID }}
 
-    defaults:
-      run:
-        working-directory: ./lab
+  - name: Verify Azure
+    run: |
+      az account show
 
-    steps:
+  - name: Terraform Init
+    run: terraform init
 
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Format
-        run: terraform fmt -check -recursive
-
-      - name: Terraform Validate
-        run: terraform validate
-
-      - name: Terraform Plan
-        run: terraform plan
+  - name: Terraform Plan
+    run: terraform plan
