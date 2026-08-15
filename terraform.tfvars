@@ -7,7 +7,6 @@ rg_name = {
     rg_name = "rg2"
     location = "westus"
   }
-}
   rg3 = {
     rg_name = "rg3"
     location = "westus"
@@ -15,4 +14,5 @@ rg_name = {
   rg4 = {
     rg_name = "number1"
     location = "eastus"
+}
 }
