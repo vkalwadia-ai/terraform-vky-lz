@@ -8,3 +8,11 @@ rg_name = {
     location = "westus"
   }
 }
+  rg3 = {
+    rg_name = "rg3"
+    location = "westus"
+  }
+  rg4 = {
+    rg_name = "number1"
+    location = "eastus"
+}
