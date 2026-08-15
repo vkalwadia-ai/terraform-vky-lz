@@ -1,9 +1,16 @@
-@"
+# Terraform working directory
 .terraform/
+
+# Terraform state files
 *.tfstate
 *.tfstate.*
-terraform-provider-azurerm_v4.80.0_x5.exe
+
+# Crash logs
 crash.log
 crash.*.log
-.terraform.lock.hcl
-"@ | Out-File -Encoding utf8 .gitignore
+
+# Sensitive Terraform variable files
+*.tfvars.json
+
+# Terraform provider binaries
+terraform-provider-*.exe
