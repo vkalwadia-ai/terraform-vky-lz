@@ -1,0 +1,18 @@
+rg_name = {
+  rg1 = {
+    rg_name  = "rg1"
+    location = "eastus"
+  }
+  rg2 = {
+    rg_name  = "rg2"
+    location = "westus"
+  }
+    rg3 = {
+    rg_name  = "rg3"
+    location = "westus"
+  }
+    rg4 = {
+    rg_name  = "rg-takla"
+    location = "westus"
+  }
+}   
