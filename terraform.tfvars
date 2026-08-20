@@ -11,8 +11,8 @@ rg_name = {
     rg_name  = "rg3"
     location = "westus"
   }
-    rg4 = {
-    rg_name  = "rg-takla"
-    location = "westus"
-  }
+    # rg4 = {
+    # rg_name  = "rg-takla"
+    # location = "westus"
+  # }
 }   
