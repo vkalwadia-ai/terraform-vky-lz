@@ -1,16 +1,34 @@
-# Terraform working directory
+# Terraform
 .terraform/
-
-# Terraform state files
 *.tfstate
 *.tfstate.*
-
-# Crash logs
+*.tfplan
+.terraform.lock.hcl
 crash.log
-crash.*.log
 
-# Sensitive Terraform variable files
-*.tfvars.json
+# Secrets
+.env
+*.pem
+*.key
+*.p12
+*.pfx
 
-# Terraform provider binaries
-terraform-provider-*.exe
+# Kubernetes
+.kube/
+kubeconfig*
+
+# Python
+__pycache__/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
