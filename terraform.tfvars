@@ -16,12 +16,5 @@ rg_name = {
     rg_name  = "rg-chand"
     location = "westus"
   }
-    rg3 = {
-    rg_name  = "rg3"
-    location = "westus"
-  }
-    rg4 = {
-    rg_name  = "rg-takla"
-    location = "westus"
-  }
+
 }   
