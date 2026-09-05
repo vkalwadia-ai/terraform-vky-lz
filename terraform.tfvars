@@ -1,6 +1,6 @@
 rg_name = {
   rg1 = {
-    rg_name  = "vky-rg100"
+    rg_name  = "vky-rg200"
     location = "eastus"
   }
   rg2 = {
