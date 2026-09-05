@@ -16,5 +16,9 @@ rg_name = {
     rg_name  = "rg-chand"
     location = "westus"
   }
+   rg5 = {
+    rg_name  = "rg-500"
+    location = "westus"
+  }
 
 }   
